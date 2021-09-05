@@ -1,5 +1,5 @@
 # homework
 
 ## contributor
-ZAZHIL ADHAFI
+ZAZHIL ADHAFI  
 RIZQI PRATAMA
