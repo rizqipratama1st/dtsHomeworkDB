@@ -17,14 +17,15 @@ import (
 	logdb "gorm.io/gorm/logger"
 )
 
+//hello
 func helloMovie(c *fiber.Ctx) error {
 	movie := model.Movie{
-		Model: gorm.Model{},
-		Title: "Titanic",
-		Slug: "titanic",
+		Model:       gorm.Model{},
+		Title:       "Titanic",
+		Slug:        "titanic",
 		Description: "lorem",
-		Duration: 324,
-		Image: "knwekv",
+		Duration:    324,
+		Image:       "knwekv",
 	}
 	return c.JSON(movie)
 }
@@ -48,10 +49,9 @@ func main() {
 	log.SetLevel(log.DebugLevel)
 	log.StandardLogger()
 	log.SetOutput(os.Stdout)
-	log.SetReportCaller(true) 
-	
-	gormDB, err := gorm.Open(mysql.Open("root:74712331@tcp(127.0.0.1:3306)/test?charset=utf8mb4&parseTime=True&loc=Local"), &gorm.Config{Logger: logdb.Default.LogMode(logdb.Info), 
-	})
+	log.SetReportCaller(true)
+
+	gormDB, err := gorm.Open(mysql.Open("root:74712331@tcp(127.0.0.1:3306)/test?charset=utf8mb4&parseTime=True&loc=Local"), &gorm.Config{Logger: logdb.Default.LogMode(logdb.Info)})
 
 	if err != nil {
 		panic(err.Error())
